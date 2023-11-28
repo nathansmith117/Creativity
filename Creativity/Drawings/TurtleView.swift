@@ -11,7 +11,14 @@ struct TurtleView: View
 {
     var body: some View
     {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack
+        {
+            Turtle()
+                .fill(Color.green)
+            Sun()
+                .fill(Color.yellow)
+                .overlay(Sun().stroke(Color.orange, lineWidth: 5))
+        }
     }
 }
 
