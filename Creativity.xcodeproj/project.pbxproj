@@ -17,6 +17,8 @@
 		05511C602B164636003C66A2 /* TurtleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05511C5F2B164636003C66A2 /* TurtleView.swift */; };
 		05E71F3B2B18D90600EC14FB /* Artifact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E71F3A2B18D90600EC14FB /* Artifact.swift */; };
 		05E71F3D2B18D9D700EC14FB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E71F3C2B18D9D700EC14FB /* Utilities.swift */; };
+		05E71F3F2B18DBBC00EC14FB /* ArtifactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E71F3E2B18DBBC00EC14FB /* ArtifactView.swift */; };
+		05E71F412B18DF5300EC14FB /* ScribbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E71F402B18DF5300EC14FB /* ScribbleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		05511C5F2B164636003C66A2 /* TurtleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurtleView.swift; sourceTree = "<group>"; };
 		05E71F3A2B18D90600EC14FB /* Artifact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.swift; sourceTree = "<group>"; };
 		05E71F3C2B18D9D700EC14FB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		05E71F3E2B18DBBC00EC14FB /* ArtifactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactView.swift; sourceTree = "<group>"; };
+		05E71F402B18DF5300EC14FB /* ScribbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScribbleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				05511C322B163FA7003C66A2 /* CreativityView.swift */,
+				05E71F3E2B18DBBC00EC14FB /* ArtifactView.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				05511C5F2B164636003C66A2 /* TurtleView.swift */,
+				05E71F402B18DF5300EC14FB /* ScribbleView.swift */,
 			);
 			path = Drawings;
 			sourceTree = "<group>";
@@ -298,9 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E71F3F2B18DBBC00EC14FB /* ArtifactView.swift in Sources */,
 				05511C332B163FA7003C66A2 /* CreativityView.swift in Sources */,
 				05511C312B163FA7003C66A2 /* CreativityApp.swift in Sources */,
 				05511C602B164636003C66A2 /* TurtleView.swift in Sources */,
+				05E71F412B18DF5300EC14FB /* ScribbleView.swift in Sources */,
 				05E71F3D2B18D9D700EC14FB /* Utilities.swift in Sources */,
 				05E71F3B2B18D90600EC14FB /* Artifact.swift in Sources */,
 			);
