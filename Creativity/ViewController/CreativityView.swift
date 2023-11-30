@@ -32,7 +32,7 @@ struct CreativityView: View
                 }
                 Section("Drawings", isExpanded: $canshowDrawings)
                 {
-                    
+                    NavigationLink("Turtles!", destination: TurtleView())
                 }
                 Section("Research", isExpanded: $canShowWriting)
                 {
