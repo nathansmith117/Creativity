@@ -9,16 +9,38 @@ import SwiftUI
 
 struct CreativityView: View
 {
+    //MARK: ~ Collapsibility
+    
+    @State private var canShowHaiku = false
+    @State private var canShowArt = false
+    @State private var canshowDrawings = false
+    @State private var canShowWriting = false
+    
     var body: some View
     {
-        VStack
+        NavigationStack
         {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            List
+            {
+                Section("Haiku", isExpanded: $canShowHaiku)
+                {
+                    
+                }
+                Section("Art", isExpanded: $canShowArt)
+                {
+                    
+                }
+                Section("Drawings", isExpanded: $canshowDrawings)
+                {
+                    
+                }
+                Section("Research", isExpanded: $canShowWriting)
+                {
+                    
+                }
+            }
+            .listStyle(SidebarListStyle())
         }
-        .padding()
     }
 }
 
