@@ -21,7 +21,7 @@ struct ScribbleView: View
                 index in
                 
                 let randomColorIndex = Int(arc4random()) % colors.count
-                let width = CGFloat(Int(arc4random()) % colors.count)
+                let width = CGFloat(Int(arc4random()) % 8)
                 
                 scribbles[index].stroke(colors[randomColorIndex], lineWidth: width)
             }
