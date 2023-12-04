@@ -48,3 +48,32 @@ func pathFromPointArray(from points: [CGPoint], at position: CGPoint, scale: CGF
     
     return path
 }
+
+let brown : Color = Color(red: (101.0 / 255.0), green: (67.0 / 255.0), blue: (33.0 / 255.0))
+
+func createPrideGradient() -> LinearGradient
+{
+    let prideColors : [Color] = [.red, .red, .orange, .yellow, .green, .blue, .purple, .purple]
+
+    let gradient = LinearGradient(gradient: Gradient(colors: prideColors), startPoint: .top, endPoint: .bottom)
+    
+    return gradient
+}
+
+func transInclusive(height: CGFloat) -> RadialGradient
+{
+    let colors = Gradient(colors: [.white, .pink, .blue, brown, .black, .black])
+    
+    let conic = RadialGradient(gradient: colors, center: .leading, startRadius: 1, endRadius: height / 2)
+    
+    return conic
+}
+
+extension View
+{
+    public func gradientForeground(gradientColors: [Color]) -> some View
+    {
+        self.overlay(LinearGradient(gradient: Gradient(colors: gradientColors), startPoint: .topLeading, endPoint: .bottomTrailing))
+            .mask(self)
+    }
+}
