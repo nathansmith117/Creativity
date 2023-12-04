@@ -138,7 +138,8 @@ struct SpaceshipShape : Shape
             CGPoint(x: 5, y: 0),
         ]
         
-        path = pathFromPointArray(from: points, at: CGPoint(x: rect.midX - 50, y: rect.midY), scale: 10.0)
+        path = pathFromPointArray(from: points, at: CGPoint(x: rect.midX - 55, y: rect.midY), scale: 10.0)
+        path.closeSubpath()
         let mirror = verticalMirror(of: path, in: rect)
         path.addPath(mirror)
         path.closeSubpath()
