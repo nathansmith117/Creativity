@@ -13,12 +13,15 @@ struct BobRossView: View
     {
         ZStack
         {
-            HappyTree()
-                .fill(Color.red)
-                .overlay(HappyTree()
-                    .stroke(Color.green, lineWidth: 10))
-            MultiPath()
-                .fill(Color.purple.opacity(0.33))
+            //UfoShape()
+            SpaceshipShape()
+                .stroke(Color.black, lineWidth: 10.0)
+//            HappyTree()
+//                .fill(ImagePaint(image: Image("small"), scale: 0.02))
+//                .overlay(HappyTree()
+//                    .stroke(Color.green, lineWidth: 10))
+//            MultiPath()
+//                .fill(Color.purple.opacity(0.33))
         }
     }
 }
@@ -89,6 +92,58 @@ struct MultiPath : Shape
         }
         
         return demo
+    }
+}
+
+struct UfoShape : Shape
+{
+    
+    func path(in rect : CGRect) -> Path
+    {
+        var path : Path
+        
+        let points : [CGPoint] = [
+            CGPoint(x: 0, y: 2),
+            CGPoint(x: 1, y: 1),
+            CGPoint(x: 2, y: 1),
+            CGPoint(x: 3, y: 0),
+            CGPoint(x: 5, y: 0),
+            CGPoint(x: 6, y: 1),
+            CGPoint(x: 2, y: 1),
+            CGPoint(x: 7, y: 1),
+            CGPoint(x: 8, y: 2),
+            CGPoint(x: 0, y: 2),
+        ]
+        
+        
+        path = pathFromPointArray(from: points, at: CGPoint(x: rect.midX, y: rect.midY), scale: 20.0)
+        path.closeSubpath()
+        
+        return path
+    }
+}
+
+struct SpaceshipShape : Shape
+{
+    func path(in rect : CGRect) -> Path
+    {
+        var path : Path
+        
+        let points : [CGPoint] = [
+            CGPoint(x: 5, y: 0),
+            CGPoint(x: 0, y: 6),
+            CGPoint(x: 1, y: 7),
+            CGPoint(x: 2, y: 6),
+            CGPoint(x: 5, y: 6),
+            CGPoint(x: 5, y: 0),
+        ]
+        
+        path = pathFromPointArray(from: points, at: CGPoint(x: rect.midX - 50, y: rect.midY), scale: 10.0)
+        let mirror = verticalMirror(of: path, in: rect)
+        path.addPath(mirror)
+        path.closeSubpath()
+        
+        return path
     }
 }
 

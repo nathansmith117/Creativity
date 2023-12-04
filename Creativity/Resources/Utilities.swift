@@ -34,3 +34,17 @@ func horizontalMirror(of path : Path, in rect : CGRect) -> Path
     
     return mirrored
 }
+
+func pathFromPointArray(from points: [CGPoint], at position: CGPoint, scale: CGFloat) -> Path
+{
+    var path = Path()
+    
+    path.move(to: CGPoint(x: points[0].x * scale + position.x, y: points[0].y * scale + position.y))
+    
+    for index in 1 ..< points.count
+    {
+        path.addLine(to: CGPoint(x: points[index].x * scale + position.x, y: points[index].y * scale + position.y))
+    }
+    
+    return path
+}
