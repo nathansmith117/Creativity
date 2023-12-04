@@ -11,7 +11,7 @@ let demoArtifact : Artifact = Artifact(filename: "Programming Haiku",
                                        title: "Programming Haiku!!!", artist: "me",
                                        description: "A quite wacky programming haiku")
 
-func virticalMirror(of path : Path, int rect : CGRect) -> Path
+func verticalMirror(of path : Path, in rect : CGRect) -> Path
 {
     var mirrored = Path()
     
@@ -23,7 +23,7 @@ func virticalMirror(of path : Path, int rect : CGRect) -> Path
     return mirrored
 }
 
-func horizontalMirror(of path : Path, int rect : CGRect) -> Path
+func horizontalMirror(of path : Path, in rect : CGRect) -> Path
 {
     var mirrored = Path()
     
