@@ -11,7 +11,15 @@ struct BobRossView: View
 {
     var body: some View
     {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack
+        {
+            HappyTree()
+                .fill(Color.red)
+                .overlay(HappyTree()
+                    .stroke(Color.green, lineWidth: 10))
+            MultiPath()
+                .fill(Color.purple.opacity(0.33))
+        }
     }
 }
 
@@ -31,7 +39,7 @@ struct HappyTree : Shape
         xPos += 30
         leftPath.addLine(to: CGPoint(x: xPos, y: yPos))
         
-        xPos += 70
+        xPos -= 70
         yPos += 100
         leftPath.addLine(to: CGPoint(x: xPos, y: yPos))
         
@@ -54,6 +62,33 @@ struct HappyTree : Shape
         leftPath.addPath(rightPath)
         
         return leftPath
+    }
+}
+
+struct MultiPath : Shape
+{
+    func path(in rect : CGRect) -> Path
+    {
+        var demo = Path()
+        
+        var currentX = Int(arc4random()) % Int(rect.maxX)
+        var currentY = Int(arc4random()) % Int(rect.maxY)
+        
+        demo.move(to: CGPoint(x: currentX, y: currentY))
+        
+        for _ in 1...30
+        {
+            demo.addLine(to: CGPoint(x: currentX, y: currentY + 50))
+            demo.addLine(to: CGPoint(x: currentX + 50, y: currentY + 50))
+            demo.addLine(to: CGPoint(x: currentX + 50, y: currentY))
+            demo.closeSubpath()
+            
+            currentX = Int(arc4random()) % Int(rect.maxX)
+            currentY = Int(arc4random()) % Int(rect.maxY)
+            demo.move(to: CGPoint(x: currentX, y: currentY))
+        }
+        
+        return demo
     }
 }
 
