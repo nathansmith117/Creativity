@@ -86,14 +86,10 @@ func createPolyPath(at position: CGPoint, radius: Double, lineCount: Int) -> Pat
     
     for lineNum in 0 ..< lineCount
     {
-        var angle: Double = (Double)(lineNum) * (360.0 / (Double)(lineCount))
-        angle = angle * Double.pi / 180.0
+        let angle: Double = (Double)(lineNum) * ((Double.pi * 2.0) / (Double)(lineCount))
         
-        var xRotation = radius * sin(angle)
-        var yRotation = radius * cos(angle)
-        
-        xRotation += position.x
-        yRotation += position.y
+        let xRotation = radius * sin(angle) + position.x
+        let yRotation = radius * cos(angle) + position.y
         
         path.addLine(to: CGPoint(x: xRotation, y: yRotation))
     }
