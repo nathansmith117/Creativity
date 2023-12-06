@@ -30,6 +30,25 @@ struct Triangle : Shape
     }
 }
 
+struct PrideFlag : View
+{
+    var width : CGFloat = 300.0
+    var height : CGFloat = 200.0
+    
+    var body: some View
+    {
+        ZStack
+        {
+            Rectangle()
+                .fill(createPrideGradient())
+                .frame(width: width, height: height, alignment: .center)
+            Triangle()
+                .fill(transInclusive(height: height))
+                .frame(width: width, height: height, alignment: .center)
+        }
+    }
+}
+
 #Preview ("Inclusive Gradients!")
 {
     RainbowView()
