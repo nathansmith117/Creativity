@@ -15,10 +15,10 @@ struct CustomShapesView: View
         {
             CarShape()
                 .stroke(Color.black, lineWidth: 2)
-//            UfoShape()
-//                .stroke(Color.black, lineWidth: 2)
-//            SpaceshipShape()
-//                .stroke(Color.black, lineWidth: 2)
+            UfoShape()
+                .stroke(Color.black, lineWidth: 2)
+            SpaceshipShape()
+                .stroke(Color.black, lineWidth: 2)
         }
     }
 }
