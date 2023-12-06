@@ -11,7 +11,14 @@ struct RainbowView: View
 {
     var body: some View
     {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack
+        {
+            PrideFlag(width: 75, height: 50)
+            PrideFlag()
+            Text("Inlusive Computer Science")
+                .gradientForeground(gradientColors: [.red, .green, .blue, .purple, .red, .green,
+                                                     .blue, .purple, .red, .green, .blue, .purple])
+        }
     }
 }
 
