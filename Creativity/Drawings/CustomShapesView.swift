@@ -30,6 +30,7 @@ struct UfoShape : Shape
     {
         var path : Path
         
+        //startStructure
         let points : [CGPoint] = [
             CGPoint(x: 0, y: 2),
             CGPoint(x: 1, y: 1),
@@ -42,9 +43,12 @@ struct UfoShape : Shape
             CGPoint(x: 8, y: 2),
             CGPoint(x: 0, y: 2),
         ]
+        //endStructure
         
-        
+        //startUse
         path = pathFromPointArray(from: points, at: CGPoint(x: rect.midX, y: rect.midY), scale: 20.0)
+        //enduse
+        
         path.closeSubpath()
         
         return path
@@ -106,7 +110,9 @@ struct CarShape : Shape
         
         path = pathFromPointArray(from: points, at: CGPoint(x: rect.midX, y: rect.midY), scale: 10.0)
         path.closeSubpath()
+        //startCall
         path.addPath(createPolyPath(at: CGPoint(x: rect.midX + 15.0, y: rect.midY + 50.0), radius: 7.0, lineCount: 16))
+        //endCall
         path.addPath(createPolyPath(at: CGPoint(x: rect.midX + 98.0, y: rect.midY + 50.0), radius: 7.0, lineCount: 16))
         path.closeSubpath()
         

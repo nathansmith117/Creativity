@@ -78,6 +78,7 @@ extension View
     }
 }
 
+//startMethod
 func createPolyPath(at position: CGPoint, radius: Double, lineCount: Int) -> Path
 {
     var path = Path()
@@ -98,3 +99,4 @@ func createPolyPath(at position: CGPoint, radius: Double, lineCount: Int) -> Pat
     
     return path
 }
+//endMethod
