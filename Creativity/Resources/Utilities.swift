@@ -77,3 +77,28 @@ extension View
             .mask(self)
     }
 }
+
+func createPolyPath(at position: CGPoint, radius: Double, lineCount: Int) -> Path
+{
+    var path = Path()
+    
+    path.move(to: CGPoint(x: position.x, y: position.y + radius))
+    
+    for lineNum in 0 ..< lineCount
+    {
+        var angle: Double = (Double)(lineNum) * (360.0 / (Double)(lineCount))
+        angle = angle * Double.pi / 180.0
+        
+        var xRotation = radius * sin(angle)
+        var yRotation = radius * cos(angle)
+        
+        xRotation += position.x
+        yRotation += position.y
+        
+        path.addLine(to: CGPoint(x: xRotation, y: yRotation))
+    }
+    
+    path.closeSubpath()
+    
+    return path
+}

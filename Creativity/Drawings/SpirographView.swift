@@ -11,7 +11,15 @@ struct SpirographView: View
 {
     var body: some View
     {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack
+        {
+            Spirograph()
+                .stroke(Color.blue, lineWidth: 1.0)
+            Spirograph(scalar: 15, increment: 5.3)
+                .stroke(Color.red, lineWidth: 3)
+            Spirograph(largeRadius: 43.3)
+                .stroke(Color.orange, lineWidth: 0.3)
+        }
     }
 }
 
