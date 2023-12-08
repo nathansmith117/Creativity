@@ -48,7 +48,7 @@ struct CreativityView: View
                 }
                 Section("Research", isExpanded: $canShowWriting)
                 {
-                    
+                    NavigationLink("Shade", destination: CustomPDFView(url: shadeURL))
                 }
             }
             .listStyle(SidebarListStyle())
