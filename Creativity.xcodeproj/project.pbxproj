@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		050495552B237036000A75E3 /* CustomPDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050495542B237036000A75E3 /* CustomPDFView.swift */; };
 		050495582B237156000A75E3 /* ShadeWork.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 050495572B237156000A75E3 /* ShadeWork.pdf */; };
+		0504955A2B23729C000A75E3 /* drawingAssigment.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 050495592B23729C000A75E3 /* drawingAssigment.pdf */; };
 		05511C312B163FA7003C66A2 /* CreativityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05511C302B163FA7003C66A2 /* CreativityApp.swift */; };
 		05511C332B163FA7003C66A2 /* CreativityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05511C322B163FA7003C66A2 /* CreativityView.swift */; };
 		05511C352B163FA9003C66A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05511C342B163FA9003C66A2 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		050495542B237036000A75E3 /* CustomPDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPDFView.swift; sourceTree = "<group>"; };
 		050495572B237156000A75E3 /* ShadeWork.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ShadeWork.pdf; sourceTree = "<group>"; };
+		050495592B23729C000A75E3 /* drawingAssigment.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = drawingAssigment.pdf; sourceTree = "<group>"; };
 		05511C2D2B163FA7003C66A2 /* Creativity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Creativity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05511C302B163FA7003C66A2 /* CreativityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityApp.swift; sourceTree = "<group>"; };
 		05511C322B163FA7003C66A2 /* CreativityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		050495562B23712B000A75E3 /* PDFs */ = {
 			isa = PBXGroup;
 			children = (
+				050495592B23729C000A75E3 /* drawingAssigment.pdf */,
 				050495572B237156000A75E3 /* ShadeWork.pdf */,
 			);
 			path = PDFs;
@@ -307,6 +310,7 @@
 				05511C382B163FA9003C66A2 /* Preview Assets.xcassets in Resources */,
 				050495582B237156000A75E3 /* ShadeWork.pdf in Resources */,
 				05511C352B163FA9003C66A2 /* Assets.xcassets in Resources */,
+				0504955A2B23729C000A75E3 /* drawingAssigment.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

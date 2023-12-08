@@ -11,7 +11,7 @@ let demoArtifact : Artifact = Artifact(filename: "Programming Haiku",
                                        title: "Programming Haiku!!!", artist: "me",
                                        description: "A quite wacky programming haiku")
 let shadeURL = Bundle.main.url(forResource: "ShadeWork", withExtension: "pdf")!
-//let drawingPDF = Bundle.main.url(forResource: "drawingAssigment", withExtension: "pdf")!
+let drawingURL = Bundle.main.url(forResource: "drawingAssigment", withExtension: "pdf")!
 
 func loadHaiku() -> [Artifact]
 {
