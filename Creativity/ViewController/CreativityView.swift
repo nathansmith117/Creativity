@@ -29,12 +29,18 @@ struct CreativityView: View
                         haiku in
                         
                         NavigationLink(haiku.title, destination:
-                        ArtifactView(artifact: haiku))
+                                        ArtifactView(artifact: haiku))
                     }
                 }
                 Section("Art", isExpanded: $canShowArt)
                 {
-                    
+                 ForEach(loadArt())
+                    {
+                        art in
+                        
+                        NavigationLink(art.title, destination:
+                                        ArtifactView(artifact: art))
+                    }
                 }
                 Section("Drawings", isExpanded: $canshowDrawings)
                 {
