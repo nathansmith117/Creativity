@@ -49,7 +49,28 @@ func pathFromPointArray(from points: [CGPoint], at position: CGPoint, scale: CGF
     return path
 }
 
+//MARK: Color stuff
+
 let brown : Color = Color(red: (101.0 / 255.0), green: (67.0 / 255.0), blue: (33.0 / 255.0))
+
+func makeBlueShade() -> Color
+{
+    let redShift = 52
+    let greenShift = 145
+    let blueShift = 138
+    
+    let redRange = 2
+    let greenRange = 93
+    let blueRange = 7
+    
+    let redPercent =   Double((Int(arc4random())  % redRange  ) + redShift)   / 255.0
+    let greenPercent = Double((Int(arc4random())  % greenRange) + greenShift) / 255.0
+    let bluePercent =  Double((Int(arc4random())  % blueRange ) + blueShift)  / 255.0
+    
+    let blueShade = Color(red: redPercent, green: greenPercent, blue: bluePercent)
+    
+    return blueShade
+}
 
 func createPrideGradient() -> LinearGradient
 {
