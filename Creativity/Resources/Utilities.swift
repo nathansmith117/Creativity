@@ -31,7 +31,7 @@ func loadArt() -> [Artifact]
     var computerPieces : [Artifact]
     
     let pieceOne = Artifact(filename: "ThePersistenceOfMemory", title: "The Persistence of Memory", artist: "Salvador Dalí", description: "One of the most well know pieces of surrealist art")
-    let pieceTwo = Artifact(filename: "", title: "", artist: "", description: "")
+    let pieceTwo = Artifact(filename: "IndefiniteDivisibility", title: "Indefinite Divisibility", artist: "Yves Tanguy", description: "A surrealist oil painting")
     let pieceThree = Artifact(filename: "", title: "", artist: "", description: "")
     
     computerPieces = [pieceOne, pieceTwo, pieceThree]
