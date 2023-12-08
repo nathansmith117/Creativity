@@ -13,6 +13,8 @@ struct BobRossView: View
     {
         ZStack
         {
+            makeBlueShade()
+                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             HappyTree()
                 .fill(ImagePaint(image: Image("small"), scale: 0.02))
                 .overlay(HappyTree()

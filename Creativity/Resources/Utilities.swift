@@ -11,6 +11,34 @@ let demoArtifact : Artifact = Artifact(filename: "Programming Haiku",
                                        title: "Programming Haiku!!!", artist: "me",
                                        description: "A quite wacky programming haiku")
 
+func loadHaiku() -> [Artifact]
+{
+    var creativityHaiku = [Artifact]()
+    
+    let editor = Artifact(filename: "TextEditorHaiku", title: "The text editor haiku", artist: "The depths of the universe", description: "A funny funny text editor haiku")
+    let programmingLanguage = Artifact(filename: "ProgrammingHaiku", title: "The programming language haiku", artist: "The depths of my downloads folder", description: "A very true programming language haiku")
+    let OSHaiku = Artifact(filename: "OSHaiku", title: "The OS haiku", artist: "Tux The Penguin", description: "A quite funnies OS haiku")
+    
+    creativityHaiku.append(editor)
+    creativityHaiku.append(programmingLanguage)
+    creativityHaiku.append(OSHaiku)
+    
+    return creativityHaiku
+}
+
+func loadArt() -> [Artifact]
+{
+    var computerPieces : [Artifact]
+    
+    let pieceOne = Artifact(filename: "ThePersistenceOfMemory", title: "The Persistence of Memory", artist: "Salvador Dalí", description: "One of the most well know pieces of surrealist art")
+    let pieceTwo = Artifact(filename: "", title: "", artist: "", description: "")
+    let pieceThree = Artifact(filename: "", title: "", artist: "", description: "")
+    
+    computerPieces = [pieceOne, pieceTwo, pieceThree]
+    
+    return computerPieces
+}
+
 func verticalMirror(of path : Path, in rect : CGRect) -> Path
 {
     var mirrored = Path()
