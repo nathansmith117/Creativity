@@ -60,8 +60,8 @@ func makeBlueShade() -> Color
     let blueShift = 138
     
     let redRange = 2
-    let greenRange = 93
-    let blueRange = 7
+    let greenRange = 50
+    let blueRange = 117
     
     let redPercent =   Double((Int(arc4random())  % redRange  ) + redShift)   / 255.0
     let greenPercent = Double((Int(arc4random())  % greenRange) + greenShift) / 255.0

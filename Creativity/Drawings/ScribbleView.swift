@@ -16,6 +16,8 @@ struct ScribbleView: View
     {
         ZStack()
         {
+            makeBlueShade()
+                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             ForEach(scribbles.indices, id: \.self)
             {
                 index in
