@@ -34,7 +34,7 @@ struct CreativityView: View
                 }
                 Section("Art", isExpanded: $canShowArt)
                 {
-                 ForEach(loadArt())
+                    ForEach(loadArt())
                     {
                         art in
                         
