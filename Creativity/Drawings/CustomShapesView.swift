@@ -19,6 +19,8 @@ struct CustomShapesView: View
                 .stroke(Color.black, lineWidth: 2)
             SpaceshipShape()
                 .stroke(Color.black, lineWidth: 2)
+            FaceShape()
+                .stroke(Color.black, lineWidth: 2)
         }
     }
 }
@@ -125,6 +127,9 @@ struct FaceShape : Shape
     func path(in rect : CGRect) -> Path
     {
         var path = Path()
+        
+        path.addPath(createPolyPath(at: CGPoint(x: rect.midX + 15, y: rect.midY), radius: 10.0, lineCount: 4))
+        path.addPath(verticalMirror(of: path, in: rect))
         
         return path
     }
