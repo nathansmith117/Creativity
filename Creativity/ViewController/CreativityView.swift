@@ -46,6 +46,7 @@ struct CreativityView: View
                 {
                     NavigationLink("Turtles!", destination: TurtleView())
                     NavigationLink("Scribble", destination: ScribbleView())
+                    NavigationLink("My funny funny tiny drawings💩", destination: CustomShapesView())
                 }
                 Section("Research", isExpanded: $canShowWriting)
                 {
