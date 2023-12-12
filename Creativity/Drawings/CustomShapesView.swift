@@ -130,6 +130,8 @@ struct FaceShape : Shape
         
         path.addPath(createPolyPath(at: CGPoint(x: rect.midX + 15, y: rect.midY), radius: 10.0, lineCount: 4))
         path.addPath(verticalMirror(of: path, in: rect))
+        path.move(to: CGPoint(x: rect.midX - 10, y: rect.midY + 20))
+        path.addLine(to: CGPoint(x: rect.midX + 15, y: rect.midY + 20))
         
         return path
     }
