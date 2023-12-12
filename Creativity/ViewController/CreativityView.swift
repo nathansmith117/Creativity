@@ -48,6 +48,8 @@ struct CreativityView: View
                     NavigationLink("Scribble", destination: ScribbleView())
                     NavigationLink("My funny funny tiny drawings💩", destination: CustomShapesView())
                     NavigationLink("Based pride flag🏳️‍🌈", destination: RainbowView())
+                    NavigationLink("Bob Ross lol", destination: BobRossView())
+                    NavigationLink("The funny shapes", destination: SpirographView())
                 }
                 Section("Research", isExpanded: $canShowWriting)
                 {
